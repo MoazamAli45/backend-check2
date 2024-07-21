@@ -11,6 +11,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the User Registration API");
+});
 app.use(express.json());
 // imports
 const user = require("./routes/userRoutes");
